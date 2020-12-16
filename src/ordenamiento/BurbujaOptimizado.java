@@ -1,0 +1,77 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ordenamiento;
+
+/**
+ *
+ * @author Rogelio Valle
+ */
+public class BurbujaOptimizado {
+    
+    public long tInicio;
+    public long tFinal;
+    public long tTotal;
+    
+    public BurbujaOptimizado(){
+        this.tFinal = 0;
+        this.tInicio = 0;
+        this.tTotal = 0 ;
+    }
+
+    public long gettInicio() {
+        return tInicio;
+    }
+
+    public void settInicio(long tInicio) {
+        this.tInicio = tInicio;
+    }
+
+    public long gettFinal() {
+        return tFinal;
+    }
+
+    public void settFinal(long tFinal) {
+        this.tFinal = tFinal;
+    }
+
+    public long gettTotal() {
+        return tTotal;
+    }
+
+    public void settTotal(long tTotal) {
+        this.tTotal = tTotal;
+    }
+    
+    public void ordenar(int[] datos){
+        this.tInicio = System.currentTimeMillis();
+        ordenarDatos(datos);
+        this.tFinal = System.currentTimeMillis();
+        this.tTotal = this.tFinal - this.tInicio;
+    }
+    
+    private void ordenarDatos(int[] datos) { // peor de los casos  3 + 3n + 16n2  notación "O" grande O(n2)
+      int i, j, aux; // 3
+      boolean isSwapped;
+      
+        for (i = 0; i < datos.length - 1; i++) { //  3(n)
+            isSwapped = false;
+            // subir la burbuja o elemento a ordenar (ajustamos en la pos que le corresponde)
+            for (j = 0; j < datos.length - 1; j++) { // 16(n)(n) = 16n2
+                // si entra al if se hace intercambio
+                if (datos[j + 1] < datos[j]) { // 4  13
+                    aux = datos[j + 1]; // 3
+                    datos[j + 1] = datos[j]; // 4
+                    datos[j] = aux; // 2
+                    isSwapped = true;
+                }
+            }
+            if(isSwapped==false)
+                break;
+        }
+    }
+    
+    
+}
