@@ -11,9 +11,9 @@ import java.util.List;
  */
 public class Solucion {
     
-    // list of items to put in the bag to have the maximal value
+    // lista de articulos para meter en la mochila en base a su valor
 	public List<Articulo> articulos;
-	// maximal value possible
+	// maximo valor posible
 	public int valor;
 	
 	public Solucion(List<Articulo> articulos, int valor) {

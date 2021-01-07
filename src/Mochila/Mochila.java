@@ -72,7 +72,7 @@ public class Mochila {
     for (int i = NB_ITEMS; i > 0  &&  res > 0; i--) {
       if (res != mat[i-1][c]) {
         itemsSolution.add(instancias.get(i-1));
-        // we remove items value and weight
+        // Remuevo los articulos en base a su valor y su peso
         res -= instancias.get(i-1).valor;
         c -= instancias.get(i-1).peso;
       }
