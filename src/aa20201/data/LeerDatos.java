@@ -36,7 +36,7 @@ public class LeerDatos {
         try {
             //llamamos el metodo que permite cargar la ventana
             JFileChooser file = new JFileChooser();
-            file.setCurrentDirectory(new File("C:\\Users\\Rogelio Valle\\Desktop\\csv"));
+            file.setCurrentDirectory(new File("C:\\Users\\Rogelio Valle\\Desktop\\Analisis de Algoritmos\\Reporte Problema Mochila\\Datos para el codigo\\csv"));
             file.showOpenDialog(file);
             //abrimos el archivo seleccionado
             File abre = file.getSelectedFile();
