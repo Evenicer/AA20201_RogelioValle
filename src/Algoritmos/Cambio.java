@@ -86,15 +86,22 @@ public class Cambio
     }
     
     public static void main(String[] args) {
-        int x = 135;
-        Cambio c = new Cambio(x, new int[]{20,10,5,1});
+        int x = 177;
+        int moneda1 , moneda2, moneda3, moneda4;
+        
+        moneda1 = 100;
+        moneda2 = 20;
+        moneda3 = 5;
+        moneda4 = 1;
+        
+        Cambio c = new Cambio(x, new int[]{moneda1 , moneda2 , moneda3, moneda4});
         
         System.out.println ("¿Cuántos billetes hacen falta para cambiar un cheque de "+x+"?" );
 
-        System.out.println("Billetes de 20: "+c.getVectorSeleccion()[0]);
-        System.out.println("Billetes de 10: "+c.getVectorSeleccion()[1]);
-        System.out.println("Billetes de 5: "+c.getVectorSeleccion()[2]);
-        System.out.println("Billetes de 1: "+c.getVectorSeleccion()[3]);
+        System.out.println("Monedas de "+moneda1+": "+c.getVectorSeleccion()[0]);
+        System.out.println("Monedas de "+moneda2+": "+c.getVectorSeleccion()[1]);
+        System.out.println("Monedas de "+moneda3+": "+c.getVectorSeleccion()[2]);
+        System.out.println("Monedas de "+moneda4+": "+c.getVectorSeleccion()[3]);
     }
 
 }
